@@ -1,0 +1,12 @@
+{
+  "name": "site-talk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "工地三语翻译 — 中文 / Español / English voice translator for HVAC job sites",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": { "node": ">=20" }
+}

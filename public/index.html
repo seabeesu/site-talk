@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>工地三语翻译</title>
+<meta name="theme-color" content="#0f3d5e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="工地翻译">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="title">工地三语翻译 <small>中文 · Español · English</small></div>
+  <nav class="tabs">
+    <button id="tabTalk" class="on">对话</button>
+    <button id="tabBook">常用短句</button>
+  </nav>
+</header>
+
+<main id="talk">
+  <div class="opts">
+    <button id="formal" class="pill" aria-pressed="false">对工人用 tú</button>
+    <button id="auto" class="pill on" aria-pressed="true">自动朗读：开</button>
+    <span class="grow"></span>
+    <button id="clear" class="pill ghost">清空</button>
+  </div>
+  <div id="net" class="note" hidden>没有网络：翻译和朗读暂时用不了，常用短句还能看。</div>
+  <div id="log" aria-live="polite">
+    <div id="empty" class="empty">
+      点下面按钮说话，再点一下结束。<br>
+      Toca el botón, habla, y toca otra vez para terminar.
+    </div>
+  </div>
+</main>
+
+<main id="book" hidden>
+  <input id="q" type="search" placeholder="搜索 / Buscar / Search" aria-label="搜索短句">
+  <div id="cats" class="chips"></div>
+  <div id="plist"></div>
+  <p class="fine">短句是一般施工用语。涉及电、高处、高温的指令，请当面确认对方真的听懂了。</p>
+</main>
+
+<footer id="dock">
+  <div id="status" class="status" hidden></div>
+  <div class="mics">
+    <button class="mic zh" data-lang="zh"><b>我说中文</b><span>点一下开始</span></button>
+    <button class="mic es" data-lang="es"><b>Habla tú</b><span>Español</span></button>
+  </div>
+  <div class="row">
+    <button class="mic en small" data-lang="en"><b>English</b></button>
+    <input id="txt" type="text" enterkeyhint="send" placeholder="或者打字（三种语言都行）" aria-label="打字翻译">
+    <button id="send" class="sendbtn" aria-label="翻译">译</button>
+  </div>
+</footer>
+
+<div id="show" class="show" hidden>
+  <div id="showTop" class="s-small"></div>
+  <div id="showBig" class="s-big"></div>
+  <div id="showBottom" class="s-small"></div>
+  <div class="s-btns">
+    <button id="showSay">🔊 朗读 / Escuchar</button>
+    <button id="showClose">关闭 / Cerrar</button>
+  </div>
+</div>
+
+<script src="/phrases.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
