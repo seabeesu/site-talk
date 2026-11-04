@@ -1,10 +1,10 @@
 {
-  "name": "工地三语翻译",
-  "short_name": "工地翻译",
+  "name": "工地通 · SiteTalk",
+  "short_name": "工地通",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#0f3d5e",
+  "background_color": "#f99b09",
   "theme_color": "#0f3d5e",
   "lang": "zh-CN",
   "icons": [

@@ -225,6 +225,6 @@ const server = http.createServer((req, res) => {
 });
 
 if (require.main === module) {
-  server.listen(PORT, '0.0.0.0', () => console.log('工地三语翻译 on :' + PORT + (KEY ? '' : ' (NO AI KEY)')));
+  server.listen(PORT, '0.0.0.0', () => console.log('工地通 SiteTalk on :' + PORT + (KEY ? '' : ' (NO AI KEY)')));
 }
 module.exports = { server, SYSTEM };
